@@ -1,0 +1,142 @@
+1-The length of the sentence (the number of characters):
+
+ String input = "The quick brown fox";
+
+int count = 0;
+for (int i=0; i<input.length(); i++) {
+    if (input.charAt(i) != ' ') {
+        ++count;
+    }
+}
+System.out.println(count);
+
+2-The number of words in the sentence (assuming that the words are separated by a single space):
+
+using namespace std;
+ 
+int main()
+{
+    map<string, int> a;
+    char s[500];
+ 
+    gets(s);
+ 
+    getchar();
+ 
+    char *t;
+ 
+    t = strtok(s, " ");
+ 
+    while(t)
+    {
+        a[t]++;
+        t = strtok(NULL, " ");
+    }
+    int cnt = 0;
+   /* for(map<string, int> ::iterator it=a.begin(); it != a.end(); it++)
+    {
+        cnt ++;
+    }*/
+    cout << a.size() << endl;
+    return 0;
+}
+ 
+3-The number of vowels in the sentence:
+
+int main()
+{
+vowels = 0,
+          consonant = 0,
+          specialChar = 0,
+          digit = 0;
+ 
+        // str.length() function to count number of
+        // character in given string.
+        for (var i = 0; i < str.length; i++) {
+          var ch = str[i];
+ 
+          if ((ch >= "a" && ch <= "z") ||
+          (ch >= "A" && ch <= "Z")) {
+            // To handle upper case letters
+            ch = ch.toLowerCase();
+ 
+            if (ch == "a" || ch == "e" || ch == "i" ||
+            ch == "o" || ch == "u")
+              vowels++;
+            else consonant++;
+   }
+        document.write("Vowels: " + vowels + "<br>");
+        document.write("Consonant: " + consonant + "<br>");
+
+4-Each character will be treated separately:
+int main()
+{
+let charCount = new Array(MAX_CHAR);
+        charCount.fill(0);
+ 
+   
+        for (let i = 0; i < str.length; i++)
+ 
+            charCount[str[i].charCodeAt()-'a'.charCodeAt()]++;   
+ 
+        
+        for (let i=0;i<MAX_CHAR;i++)
+            for (let j=0;j<charCount[i];j++)
+                 document.write(String.fromCharCode('a'.charCodeAt()+i) );
+    }
+ 
+    let s = "geeksforgeeks";   
+    sortString(s);   
+
+5-The last character is the point:
+int main()
+{
+if((i>=s.length && j<0) || (i == j))
+        return MAX;
+    if(s[i] == s[j])
+        return count;
+ 
+    // Decrement ending index only
+    if(i >=s.length)
+        return minOperation(s,i,j-1,count+1);
+         
+    // Increment starting index only
+    else if(j<0)
+        return minOperation(s,i+1,j,count+1);
+     
+    // Increment starting index and decrement index
+    else
+        return Math.min(minOperation(s,i,j-1,count+1),
+        minOperation(s,i+1,j,count+1));
+ 
+ 
+}
+
+6-Use three variables as counters:
+
+initialize passes to zero
+
+initialize failures to zero
+
+initialize student to one
+
+while student counter is less than or equal to ten
+
+input the next exam result
+
+if the student passed
+add one to passes
+
+else
+
+add one to failures
+add one to student counter
+
+print the number of passes
+
+print the number of failures
+
+if eight or more students passed
+
+print "raise tuition"
+}
